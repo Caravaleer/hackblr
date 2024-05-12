@@ -18,23 +18,28 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app)
 
-document.getElementById("submit").addEventListener('click', (e) =>{
-  e.preventDefault();
-  let project_name = document.getElementById("project_name").value;
-  let project_description = document.getElementById("project_description").value;
-  let tags_array = document.getElementById("project_tags").value.toLowerCase().split(",").sort();
-  let demands_ = document.getElementById("demands").value;
-  // console.log(project_name)
-  // console.log(project_description)
-  // console.log(tags)
-  set(ref(db, 'ideas/' + project_name), {
-    projectName : project_name,
-    projectDescription : project_description,
-    tags : tags_array,
-    projectDemands : demands_
-  });
-  document.getElementById("project_name").value=""
-  document.getElementById("project_description").value=""
-  document.getElementById("project_tags").value=""
-  document.getElementById("demands").value=""
-})
+
+export function add_value(userId){
+  document.getElementById("submit").addEventListener('click', (e) =>{
+    e.preventDefault();
+    let project_name = document.getElementById("project_name").value;
+    let project_description = document.getElementById("project_description").value;
+    let tags_array = document.getElementById("project_tags").value.toLowerCase().split(",").sort();
+    let demands_ = document.getElementById("demands").value;
+    // console.log(project_name)
+    // console.log(project_description)
+    // console.log(tags)
+    set(ref(db, 'ideas/' + project_name), {
+      id:userId,
+      projectName : project_name,
+      projectDescription : project_description,
+      tags : tags_array,
+      projectDemands : demands_
+    });
+    document.getElementById("project_name").value=""
+    document.getElementById("project_description").value=""
+    document.getElementById("project_tags").value=""
+    document.getElementById("demands").value=""
+  })
+
+}

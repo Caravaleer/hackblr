@@ -56,9 +56,11 @@ submitButton.addEventListener('click', (e) => {
 // this is login of the user
 // this is login of the user
 const loginButton = document.getElementById('login_button'); // Get the login button element
+let userId
 
 loginButton.addEventListener('click', (e) => {
     e.preventDefault();
+    console.log("loging clicked")
 
     const email = document.getElementById("loginEmail").value;
     const password = document.getElementById("loginPassword").value;
@@ -67,11 +69,15 @@ loginButton.addEventListener('click', (e) => {
         .then((userCredential) => {
             const user = userCredential.user;
             const dt = new Date(); // Use new Date() to get the current date and time
+            
             update(ref(database, 'users/' + user.uid), {
                 last_login: dt
             })
             alert("User logged in successfully!");
-            window.location.replace("https://www.youtube.com");
+            userId=user.uid;
+            location.href = "./homepage.html";
+
+            
         })
         .catch((error) => {
             const errorMessage = error.message;
@@ -80,7 +86,6 @@ loginButton.addEventListener('click', (e) => {
 });
 
 const user = auth.currentUser;
-
 onAuthStateChanged(auth, (user) => {
     if (user) {
         // User is signed in, see docs for a list of available properties

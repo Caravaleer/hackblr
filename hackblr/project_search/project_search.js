@@ -35,9 +35,9 @@ function checktags(){
     for(let i of snaps){
         inside = true
         for(let s of tags){
-            console.log("s is " + s);
-            console.log("r is " + i['tags'])
-            console.log(i['tags'].includes(s));
+            // console.log("s is " + s);
+            // console.log("r is " + i['tags'])
+            // console.log(i['tags'].includes(s));
             if(!(i['tags'].includes(s))){
                 inside= false
             }
