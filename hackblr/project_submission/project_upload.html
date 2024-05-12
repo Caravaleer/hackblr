@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="project_upload.css" />
+  </head>
+
+  <body>
+    <h1>Project Input</h1>
+
+    <form>
+      <div class="input-group">
+        <label for="project_name">Project Name:</label>
+        <input type="text" id="project_name" name="project_name" required />
+      </div>
+
+      <div class="input-group">
+        <label for="project_description">Project Description:</label>
+        <textarea
+          id="project_description"
+          name="project_description"
+          rows="4"
+          required
+        ></textarea>
+      </div>
+
+      <div class="input-group">
+        <label for="project_tags">Project Tags:</label>
+        <input type="text" id="project_tags" name="project_tags" />
+      </div>
+
+      <div class="input-group">
+        <label for="demands">Demands:</label>
+        <textarea id="demands" name="demands" rows="4"></textarea>
+      </div>
+
+      <input type="submit" id="submit" />
+    </form>
+
+    <script type="module" src="project_upload.js"></script>
+  </body>
+</html>
