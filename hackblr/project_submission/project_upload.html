@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="project_upload.css" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <div class="container">
+    <header>
+      <nav>
+        <a href="../main page(main)/index.html" class="button">HOME</a>
+        <a href="../project_submission/project_upload.html" class="button">PROJECTS</a>
+        <a href="../project_search/project_search.html" class="button">SEARCH</a>
+        
+        
+      </nav>
+      <div class="user">USER DETAILS</div>
+    </header>
+    <div class="content">
+    <h1>Project Input</h1>
+
+    <form>
+      <div class="input-group">
+        <label for="project_name">Project Name:</label>
+        <input type="text" id="project_name" name="project_name" required />
+      </div>
+
+      <div class="input-group">
+        <label for="project_description">Project Description:</label>
+        <textarea
+          id="project_description"
+          name="project_description"
+          rows="4"
+          required
+        ></textarea>
+      </div>
+
+      <div class="input-group">
+        <label for="project_tags">Project Tags:</label>
+        <input type="text" id="project_tags" name="project_tags" />
+      </div>
+
+      <div class="input-group">
+        <label for="demands">Demands:</label>
+        <textarea id="demands" name="demands" rows="4"></textarea>
+      </div>
+
+      <input type="submit" id="submit" />
+    </form>
+  </div>
+  </div>
+  <footer><p>FOOTER</p></footer>
+
+    <script type="module" src="project_upload.js"></script>
+  </body>
+</html>

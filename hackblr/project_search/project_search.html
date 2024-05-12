@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project search</title>
+    <link rel="stylesheet" href="project_search.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+          <a href="../main page(main)/index.html" class="button">HOME</a>
+          <a href="../project_submission/project_upload.html" class="button">PROJECTS</a>
+          <a href="../project_search/project_search.html" class="button">SEARCH</a>
+          
+          
+        </nav>
+        <div class="user">USER DETAILS</div>
+      </header>
+    <h1>Project search</h1>
+
+
+    <form>
+        <div class="input-group">
+            <label for="project_name">Tags:</label>
+            <input type="text" id="tags" name="project_name" required>
+            <small>Separate tags with commas (e.g., tag1, tag2, tag3)</small>
+        </div>
+
+        <input type="submit" id="submit">
+        <div id="search_div"></div>
+    </form>
+
+
+    <script type="module" src="project_search.js"></script>
+</body>
+
+</html>
