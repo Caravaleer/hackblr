@@ -33,17 +33,17 @@
             <input
               pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
               placeholder="Email"
-              id="email"
+              id="loginEmail"
               name="email"
               type="text"
             />
             <input
               placeholder="Password"
-              id="password"
+              id="loginPassword"
               name="password"
               type="password"
             />
-            <input value="Login" class="btn" type="submit" />
+            <input value="Login" class="btn" type="submit" id="login_button" />
 
           </div>
           <div class="form" id="signupContent" style="display: none">
@@ -54,6 +54,7 @@
                 <input
                   class="input"
                   type="text"
+                  id="signupFirstname"
                   placeholder="Firstname"
                   required=""
                 />
@@ -62,6 +63,7 @@
                 <input
                   class="input"
                   type="text"
+                  id="signupLastname"
                   placeholder="Lastname"
                   required=""
                 />
@@ -73,6 +75,7 @@
               <input
                 class="input"
                 type="email"
+                id="signupEmail"
                 placeholder="email"
                 required=""
               />
@@ -83,6 +86,7 @@
               <input
                 class="input"
                 type="password"
+                id="signupPassword"
                 placeholder="password"
                 required=""
               />
@@ -94,10 +98,12 @@
                 type="password"
                 placeholder="Confirm password"
                 required=""
+                id="signupConfirm"
+                name="signupConfirm"
               />
               <!-- <span>Confirm password</span> -->
             </label>
-            <button class="submit" style="justify-self: center;">Submit</button>
+            <button class="submit" style="justify-self: center;" id="signupSubmit">Submit</button>
 
           </div>
         </div>
@@ -110,7 +116,9 @@
 
     </div>
     <footer><p>FOOTER</p></footer>
+    <script type="module" src="login_button.js"></script>
     <script src="script.js"></script>
     <script src="login.js"></script>
+    
   </body>
 </html>
