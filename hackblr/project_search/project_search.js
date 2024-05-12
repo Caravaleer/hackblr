@@ -56,10 +56,20 @@ function checktags(){
     
     for(let val of result){
         let d = document.createElement('div')
-        d.setAttribute("class", "result_div")
-        d.setAttribute("id", "result_div")
+        let newP = document.createElement("a");
+        
+        let btn = document.createElement("button");
+        btn.setAttribute("class", "visit");
+        btn.innerText = "Visit Profile";
+        newP.append(btn);
+        newP.setAttribute("href", "");
+        d.setAttribute("class", "result_div");
+        // d.setAttribute("id", "result_div");
+        
         d.innerText = "Project name : \n"+ val['projectName'] + "\n\n" + "Description : \n" + val['description'] + "\n\n" +"Demands : \n" + val['demands'] + "\n\n" +"Tags : \n" + val['tg'].sort().toString();
         search_div.append(d);
+        d.append(newP);
+        newP.append(btn)
     }
 
 }
